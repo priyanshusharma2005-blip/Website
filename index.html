@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GadgetHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family: 'Segoe UI', sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+section{
+padding:20px;
+}
+
+h2{
+border-left:5px solid #22c55e;
+padding-left:10px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,3fr));
+gap:15px;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+background:#1e293b;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:8px;
+color:white;
+margin-top:8px;
+width:100%;
+cursor:pointer;
+border-radius:6px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+#cart{
+background:#111827;
+padding:20px;
+margin:20px;
+border-radius:12px;
+}
+
+input{
+width:100%;
+padding:8px;
+margin:5px 0;
+border-radius:6px;
+border:none;
+}
+
+.total{
+font-size:18px;
+font-weight:bold;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Priyanshu Electronics PRO Store 🚀
+</header>
+
+<section>
+<h2>Smartphones</h2>
+<div class="products">
+
+<div class="card"><img src="C:\Users\iaman\Downloads\iphone 15.webp" alt="iphone 15"><h3>iPhone 15</h3><p>128GB | 48MP</p><p>₹79999</p><button onclick="addToCart('iPhone 15',79999)">Add to Cart</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\SamsungGalaxy S23 ultra.webp" alt="Samsung Galaxy S23 ultra"><h3>Samsung Galaxy S23 ultra</h3><p>Snapdragon 8 Gen 2</p><p>₹89999</p><button onclick="addToCart('Samsung Galaxy S23 ultra',89999)">Add to Cart</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\One Plus 12.webp" alt="OnePlus 12"><h3>OnePlus 12</h3><p>16GB RAM</p><p>₹64999</p><button onclick="addToCart('OnePlus 12',64999)">Add to Cart</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Redmi Note13.webp" alt="Redmi NOte 13"><h3>Redmi Note 13</h3><p>108MP</p><p>₹18999</p><button onclick="addToCart('Redmi Note 13',18999)">Add to Cart</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Vivo V29.webp" alt="Vivo V29"><h3>Vivo V29</h3><p>AMOLED</p><p>₹27999</p><button onclick="addToCart('Vivo V29',27999)">Add to Cart</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Realme GT.webp" alt="Realme GT"><h3>Realme GT</h3><p>144Hz</p><p>₹34999</p><button onclick="addToCart('Realme GT',34999)">Add to Cart</button></div>
+
+</div>
+</section>
+
+<section>
+<h2>Smart Watches</h2>
+<div class="products">
+
+<div class="card"><img src="C:\Users\iaman\Downloads\Apple watch 9.webp" alt="Apple Watch 9"><h3>Apple Watch 9"></h3><p>ECG</p><p>₹41999</p><button onclick="addToCart('Apple Watch 9',41999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Galaxy watch 6.webp" alt="Galaxy Watch 6"><h3>Galaxy Watch 6</h3><p>GPS</p><p>₹29999</p><button onclick="addToCart('Galaxy Watch 6',29999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Nolse Colorfit.webp" alt="Noise Colorfit"><h3>Noise ColorFit</h3><p>Heart Monitor</p><p>₹3999</p><button onclick="addToCart('Noise ColorFit',3999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Boat Xtend.webp" alt="Boat Xtend"><h3>Boat Xtend</h3><p>Alexa</p><p>₹2999</p><button onclick="addToCart('Boat Xtend',2999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Amazfit GTS 4.webp" alt="Amazfit GTS 4"><h3>Amazfit GTS 4</h3><p>Sports Mode</p><p>₹12999</p><button onclick="addToCart('Amazfit GTS 4',12999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\FireBolt Ninja.webp" alt="FireBolt Ninja"><h3>FireBoltt Ninja</h3><p>SpO2</p><p>₹2499</p><button onclick="addToCart('FireBoltt Ninja',2499)">Add</button></div>
+
+</div>
+</section>
+
+<section>
+<h2>Laptops</h2>
+<div class="products">
+
+<div class="card"><img src="C:\Users\iaman\Downloads\MacBook Air M2.webp" alt="MacBook Air M2"><h3>MacBook Air M2</h3><p>8GB | 256GB</p><p>₹99999</p><button onclick="addToCart('MacBook Air M2',99999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\HP pavilion.webp" alt="HP Pavilion"><h3>HP Pavilion</h3><p>i5 12th Gen</p><p>₹65999</p><button onclick="addToCart('HP Pavilion',65999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Dell Inspiron.webp" alt="Dell Inspiron"><h3>Dell Inspiron</h3><p>Ryzen 5</p><p>₹57999</p><button onclick="addToCart('Dell Inspiron',57999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Lenovo Ideapad.webp" alt="Lenovo Ideapad"><h3>Lenovo IdeaPad</h3><p>FHD</p><p>₹49999</p><button onclick="addToCart('Lenovo IdeaPad',49999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\ASUS VivoBook.webp" alt="ASUS vivoBook"><h3>Asus VivoBook</h3><p>Thin & Light</p><p>₹54999</p><button onclick="addToCart('Asus VivoBook',54999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Acer Aspire 5.webp" alt="Acer Aspire 5"><h3>Acer Aspire 5</h3><p>i5</p><p>₹59999</p><button onclick="addToCart('Acer Aspire 5',59999)">Add</button></div>
+
+</div>
+</section>
+
+<section>
+<h2>Other Electronics</h2>
+<div class="products">
+<div class="card"><img src="C:\Users\iaman\Downloads\bluetooth Speaker.webp" alt="Bluetooth Speaker"><h3>Bluetooth Speaker</h3><p>₹4999</p><button onclick="addToCart('Bluetooth Speaker',4999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Wireless Earbuds.webp" alt="Wireless Earbuds"><h3>Wireless Earbuds</h3><p>₹6999</p><button onclick="addToCart('Wireless Earbuds',6999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Power Bank.webp" alt="Power Bank"><h3>Power Bank</h3><p>₹1999</p><button onclick="addToCart('Power Bank',1999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Gaming Nouse.webp" alt="Gaming Mouse"><h3>Gaming Mouse</h3><p>₹1499</p><button onclick="addToCart('Gaming Mouse',1499)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Keyboard.webp" alt="Keyboard"><h3>Keyboard</h3><p>₹2499</p><button onclick="addToCart('Keyboard',2499)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Smart TV.webp" alt="Smar TV"><h3>Smart TV</h3><p>₹45999</p><button onclick="addToCart('Smart TV',45999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Wifi router.webp" alt="WiFi Router"><h3>WiFi Router</h3><p>₹2999</p><button onclick="addToCart('WiFi Router',2999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\External HDD.webp" alt="External HDD"><h3>External HDD</h3><p>₹5999</p><button onclick="addToCart('External HDD',5999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Printer.webp" alt="Printer"><h3>Printer</h3><p>₹8999</p><button onclick="addToCart('Printer',8999)">Add</button></div>
+<div class="card"><img src="C:\Users\iaman\Downloads\Projector.webp" alt="Projector"><h3>Projector</h3><p>₹12999</p><button onclick="addToCart('Projector',12999)">Add</button></div>
+</div>
+</section>
+
+<section id="cart">
+<h2>🛒 Cart</h2>
+<div id="cartItems"></div>
+<p class="total">Total: ₹<span id="total">0</span></p>
+
+<h3>Buyer Details</h3>
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="address" placeholder="Address">
+<button onclick="checkout()">Checkout on WhatsApp</button>
+</section>
+
+<script>
+let cart=[];
+function addToCart(name,price){
+cart.push({name,price});
+renderCart();
+}
+
+function renderCart(){
+let cartItems=document.getElementById("cartItems");
+cartItems.innerHTML="";
+let total=0;
+
+cart.forEach((item,index)=>{
+total+=item.price;
+cartItems.innerHTML+=item.name+" - ₹"+item.price+" <button onclick='removeItem("+index+")'>X</button><br>";
+});
+
+document.getElementById("total").innerText=total;
+}
+
+function removeItem(index){
+cart.splice(index,1);
+renderCart();
+}
+
+function checkout(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+
+if(name==""||phone==""||address==""||cart.length==0){
+alert("Fill details & add items!");
+return;
+}
+
+let order="New Order:%0A";
+cart.forEach(item=>{
+order+=item.name+" - ₹"+item.price+"%0A";
+});
+
+order+="%0ATotal: ₹"+document.getElementById("total").innerText;
+order+="%0AName: "+name;
+order+="%0APhone: "+phone;
+order+="%0AAddress: "+address;
+
+window.open("https://Wa.me/917503491161?text="+order);
+}
+</script>
+
+</body>
+</html>
